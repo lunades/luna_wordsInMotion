@@ -1,0 +1,67 @@
+body {
+    background-color: #EFFFFE;
+}
+
+h1 {
+    font-family: "Homemade Apple", cursive;
+    font-size: xx-large;
+    color: #FAB4B4;
+    text-shadow: 3px 3px 4px #8324244d;
+    position: fixed;
+    top: 40%;
+    left: 32%;
+    width: 35%;
+    align-self: center;
+    text-align: center;
+    animation-name: breathe, blink;
+	animation-delay: 1s;
+	animation-direction: forward;
+	animation-duration: 10s;
+	animation-fill-mode: normal;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+
+a {
+    color: #828282;
+    text-decoration: none;
+    position: fixed;
+    top: 65%;
+    left: 49%;
+    font-size: x-large;
+}
+
+a:visited {
+    color:#828282;
+}
+
+a:hover {
+    cursor: alias;
+}
+
+@keyframes breathe {
+    0% { transform:scale(115%) ; -webkit-transition:; -moz-transition:; -ms-transition:; -o-transition:; -webkit-transform:scale(115%) ; -moz-transform:scale(115%) ; -ms-transform:scale(115%) ; -o-transform:scale(115%) ; }
+
+    50% { transform:scale(200%); -webkit-transform:scale(200%); -moz-transform:scale(200%); -ms-transform:scale(200%); -o-transform:scale(200%); }
+
+    100% {
+    transform:scale(115%)    ;
+    -webkit-transform:scale(115%)    ;
+    -moz-transform:scale(115%)    ;
+    -ms-transform:scale(115%)    ;
+    -o-transform:scale(115%)    ;
+}
+}
+
+@keyframes blink {
+    0% {color:#FAB4B4}
+
+    50% {color:#fbd9d9}
+
+    75% {color:#fbd9d9}
+
+    80% {color:#deb9b9}
+
+    100% {color:#FAB4B4}
+  }

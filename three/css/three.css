@@ -1,0 +1,150 @@
+html {
+    background: radial-gradient(circle at .5% .5%, #eddab5, #d9fbf9);
+}
+
+.summer {
+    color: #597B79;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-size: 60pt;
+     position: fixed;
+     text-shadow: 3px 3px 4px #51d2a57d;
+  animation-name: turn, blink;
+	animation-delay: 30ms;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: linear;
+}
+
+#s {
+    top: 36%;
+    left: 2%;
+}
+
+#u {
+    top: 36%;
+    left: 10%;
+}
+
+#m {
+    top: 30%;
+    left: 19%;
+}
+
+#mTwo {
+    top: 18%;
+    left: 26%;
+}
+
+#e {
+    top: 5%;
+    left: 28%
+}
+
+#r {
+    bottom: 75%;
+    left: 26%;
+}
+
+#line {
+    position: fixed;
+    bottom: 110%;
+    right: 40%;
+    font-size: 20pt;
+    color: #AF755C;
+    font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: xx-large;
+  animation-name: drop;
+  animation-delay: 1s;
+  animation-direction: forwards;
+  animation-duration: 4s;
+  animation-fill-mode:forwards;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+
+#lineTwo {
+    position: absolute;
+    top: 65%;
+    left: -50%;
+    font-size: 20pt;
+    color: #828282
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: xx-large;
+    animation-name: slide;
+	animation-delay: 4s;
+	animation-direction: forwards;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+a:visited {
+    color: #828282;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: alias;
+}
+
+
+@keyframes turn {
+    0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    50% { transform:rotate(-15deg); -webkit-transform:rotate(-15deg); -moz-transform:rotate(-15deg); -ms-transform:rotate(-15deg); -o-transform:rotate(-15deg); }
+
+    100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+}
+
+@keyframes blink {
+    0% {color:#597B79}
+    50% {color:#a5bebc}
+    0% {color:#597B79}
+  }
+
+  @keyframes drop {
+    from {
+        transform:translate(0)    ;
+        -webkit-transform:translate(0)    ;
+        -moz-transform:translate(0)    ;
+        -ms-transform:translate(0)    ;
+        -o-transform:translate(0)    ;
+}
+to {
+    transform:translateY(900%)    ;
+    -webkit-transform:translateY(1400%)    ;
+    -moz-transform:translateY(900%)    ;
+    -ms-transform:translateY(900%)    ;
+    -o-transform:translateY(900%)    ;
+}
+}
+
+@keyframes slide {
+    from {
+        transform:translate(0)    ;
+        -webkit-transform:translate(0)    ;
+        -moz-transform:translate(0)    ;
+        -ms-transform:translate(0)    ;
+        -o-transform:translate(0)    ;
+}
+
+    to {
+        transform:translateX(750%)    ;
+        -webkit-transform:translateX(750%)    ;
+        -moz-transform:translateX(750%)    ;
+        -ms-transform:translateX(750%)    ;
+        -o-transform:translateX(750%)    ;
+}
+}

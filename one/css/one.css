@@ -1,0 +1,163 @@
+#birds {
+    width: 40%;
+    height: 10%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content:space-evenly;
+    font-family: "Butterfly Kids";
+    font-size: 60pt;
+    font-weight: 500;
+    color:#AF755C;
+    text-shadow: 3px 3px 4px #828282b6;
+    animation-name: diagonal, size;
+	animation-delay: 30ms;
+	animation-direction: normal;
+	animation-duration: 6s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function:ease-in-out;
+}
+
+#birdOne {
+    animation-name: leftWing;
+	animation-delay: 30ms;
+	animation-direction: normal;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 3;
+	animation-play-state: running;
+	animation-timing-function: linear;
+}
+
+#birdTwo {
+    position: relative;
+    bottom: 20%;
+}
+
+#birdThree {
+    animation-name: rightWing;
+	animation-delay: 30ms;
+	animation-direction: normal;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 3;
+	animation-play-state: running;
+	animation-timing-function: linear;
+}
+
+#lines {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+#line {
+    color:#828282;
+    position: absolute;
+    top: 40%;
+    left: -50%;
+    animation-name: slide;
+	animation-delay: 5s;
+	animation-direction: forwards;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+#lineTwo {
+    position: absolute;
+    top: 50%;
+    left: -60%;
+    color:#828282;
+    animation-name: slide;
+	animation-delay: 7s;
+	animation-direction: forwards;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+a:visited {
+    color:#828282;
+}
+
+a {
+    text-decoration: none;
+    animation-name: blink;
+	animation-delay: 0s;
+	animation-direction:normal;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-play-state:running;
+	animation-timing-function: ease-in-out;
+}
+
+a:hover {
+    cursor:alias;
+}
+
+
+@keyframes diagonal {
+from {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+to {position: fixed;
+    left: 30%;
+    top: 90%;}
+}
+
+@keyframes size {
+    from { transform:scale(30%); -webkit-transform:scale(30%); -moz-transform:scale(30%); -ms-transform:scale(30%); -o-transform:scale(30%); }
+
+    to { transform: scale(100%); -webkit-transform: scale(100%); -moz-transform: scale(100%); -ms-transform: scale(100%); -o-transform: scale(100%);}
+}
+
+@keyframes leftWing {
+    0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    50% { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); -ms-transform:rotate(-45deg); -o-transform:rotate(-45deg); }
+
+    100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+}
+
+@keyframes rightWing {
+    0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    50% { transform:rotate(45deg); -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); -ms-transform:rotate(45deg); -o-transform:rotate(45deg); }
+
+    100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+}
+
+@keyframes slide {
+    from {
+        transform:translate(0)    ;
+        -webkit-transform:translate(0)    ;
+        -moz-transform:translate(0)    ;
+        -ms-transform:translate(0)    ;
+        -o-transform:translate(0)    ;
+}
+
+    to {
+        transform:translateX(500%)    ;
+        -webkit-transform:translateX(500%)    ;
+        -moz-transform:translateX(500%)    ;
+        -ms-transform:translateX(500%)    ;
+        -o-transform:translateX(500%)    ;
+}
+}
+
+@keyframes blink {
+    0% {color:828282}
+    50% {color:rgb(190, 189, 189)}
+    0% {color:#716f6f}
+  }
