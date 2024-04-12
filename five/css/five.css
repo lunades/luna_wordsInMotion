@@ -1,0 +1,111 @@
+body {
+    font-family: "Alegreya", serif;
+    font-weight: 400;
+    font-size: 30pt;
+    background-color: rgb(226, 237, 247);
+    color:#716f6f;
+}
+
+#lineOne {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    animation-name: appear, breathe;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-duration: 4s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    }
+
+#lineTwo {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation-name: appear, breathe;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-duration: 7s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+}
+
+#lineThree {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    animation-name: appear, breathe;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-duration: 10s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+}
+
+#lineThree a {
+    color:#716f6f;
+    text-decoration: overline #FAB4B4;
+
+}
+
+#lineThree a:visited {
+    color:#716f6f
+}
+
+a:hover {
+    cursor: alias;
+}
+
+#nav {
+    color:#716f6f;
+    position: fixed;
+    font-size: 14pt;
+    width: 18%;
+    bottom: 0%;
+    left: 0%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-end;
+    justify-content: space-around;
+    font-family: "Schoolbell", cursive;
+}
+
+#nav a {
+    color:#716f6f;
+    display:inline-block;
+    text-decoration:none;
+    justify-content: space-around;
+}
+
+#nav a:visited {color:#716f6f}
+
+#nav a:hover {
+    transform:scale(130%);
+    -webkit-transform:scale(130%);
+    -moz-transform:scale(130%);
+    -ms-transform:scale(130%);
+    -o-transform:scale(130%);
+}
+
+@keyframes appear {
+    0% {opacity: 0%}
+    40% {opacity: 5%}
+    100% {opacity: 100%}
+  }
+
+  @keyframes breathe {
+    0% { transform:scale(100%) ; -webkit-transition:; -moz-transition:; -ms-transition:; -o-transition:; -webkit-transform:scale(100%) ; -moz-transform:scale(100%) ; -ms-transform:scale(100%) ; -o-transform:scale(100%) ; }
+
+    20% { transform:scale(125%); -webkit-transform:scale(125%); -moz-transform:scale(125%); -ms-transform:scale(125%); -o-transform:scale(125%); }
+
+    100% { transform:scale(100%); -webkit-transform:scale(100%); -moz-transform:scale(100%); -ms-transform:scale(100%); -o-transform:scale(100%); }
+  }
+
+  

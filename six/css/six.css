@@ -1,0 +1,124 @@
+#top {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-color: #EFFFFE;
+    z-index: 1;
+}
+#bottom {
+    background-color: #FFEFD1;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
+}
+
+#lineOne {
+    position: fixed;
+    bottom: -20%;
+    left: 28%;
+    text-wrap: nowrap;
+    font-family: "Cookie", cursive; 
+    font-size: 50pt;
+    color:#716f6f;
+    letter-spacing: 2px; 
+    animation-name: rise, blink;
+   animation-delay: 0s;
+   animation-direction:forwards;
+   animation-duration: 6s;
+   animation-fill-mode:forwards;
+   animation-iteration-count:1;
+   animation-play-state: running;
+   animation-timing-function: ease-in-out;
+   z-index: 5;
+}
+
+#lineTwo {
+    position: absolute;
+    top: -15%;
+    left: 28%;
+    text-wrap: nowrap;
+    font-family: "Schoolbell", cursive;
+    font-size: 40pt;
+    color: #FAB4B4;
+    z-index: 5;
+    animation-name: drop, blinkTwo;
+    animation-delay: 5s;
+    animation-direction:forwards;
+    animation-duration: 5s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    z-index: 5;
+}
+    
+
+#nav {
+    color:#716f6f;
+    position: fixed;
+    font-size: 14pt;
+    width: 18%;
+    bottom: 0%;
+    left: 0%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-end;
+    justify-content: space-around;
+    font-family: "Schoolbell", cursive;
+    z-index: 8;
+}
+
+#nav a {
+    color:#716f6f;
+    display:inline-block;
+    text-decoration:none;
+    justify-content: space-around;
+}
+
+#nav a:visited {color:#716f6f}
+
+#nav a:hover {
+    transform:scale(130%);
+    -webkit-transform:scale(130%);
+    -moz-transform:scale(130%);
+    -ms-transform:scale(130%);
+    -o-transform:scale(130%);
+}
+
+@keyframes rise {
+    from { transform:translateY(0); -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); }
+
+    to {
+        transform:translateY(-62vh);
+        -webkit-transform:translateY(-62vh);
+        -moz-transform:translateY(-62vh);
+        -ms-transform:translateY(-62vh);
+        -o-transform:translateY(-62vh);
+}
+}
+
+@keyframes drop {
+    from { transform:translateY(0); -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); }
+
+    to {
+        transform:translateY(65vh);
+        -webkit-transform:translateY(65vh);
+        -moz-transform:translateY(65vh);
+        -ms-transform:translateY(65vh);
+        -o-transform:translateY(65vh);
+}
+}
+
+@keyframes blink {
+    0% {color:#716f6f}
+    50% {color:#FAB4B4}
+    0% {color:#716f6f}
+  }
+
+  @keyframes blinkTwo {
+    0% {color:#FAB4B4}
+    50% {color:#716f6f}
+    0% {color:#FAB4B4}
+  }

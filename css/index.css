@@ -1,15 +1,24 @@
+body {
+    background-color: rgb(252, 240, 224);
+}
+
 #center {
-    position: fixed;
-    top: 20%;
+    position: absolute;
+    width: 65%;
+    align-self: center;
+    text-align: center;
+    top: 30vh;
     left: 15%;
-    width: 70%;
-    height: 20em;
     background-color: #daeaf5;
-    border-radius: 1%;
-    -webkit-border-radius: 1%;
-    -moz-border-radius: 2%;
-    -ms-border-radius: 1%;
-    -o-border-radius: 1%;
+    padding: 3%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
 }
 
 a {
@@ -28,11 +37,14 @@ a:visited {
     color: #828282;
 }
 
+a:hover {
+    cursor: alias;
+}
+
 p {
     color:white;
     position: relative;
     text-shadow: 2px 2px 4px #828282;
-    top: 10%;
     text-align: center;
     font-size: xx-large;
     font-weight: 500;
@@ -40,28 +52,15 @@ p {
 
 #singer {
     position:relative;
-    top: 13%;
+    top: 25%;
     font-size:xx-large;
     font-family: "Homemade Apple", cursive;
     font-weight: 400;
 }
 
-h1 {
-    width: 10%;
-    top: 10%;
-    left: 45%;
-    position: relative;
-    align-self: center;
-    color: #828282;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-
-
 @keyframes blink {
-    0% {color:#828282}
-    50% {color:rgb(190, 189, 189)}
-    0% {color:#828282}
+    0% {color:#ffffff}
+    50% {color: #d2d1d1}
+    75% {color: #efeeee}
+    100% {color:#ffffff}
   }

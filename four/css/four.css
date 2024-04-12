@@ -1,0 +1,163 @@
+body {
+    background-color: #FFEFD1;
+    font-family: "Schoolbell", cursive;
+    font-size: 50pt;
+    color: #FAB4B4;
+    line-height: .1;
+    text-shadow: 3px 3px 4px #51d2a57d;
+}
+
+#little {
+    position:absolute;
+    top: 5%;
+    left: 2%;
+    animation-name: breathe, turn;
+	animation-delay: .50s;
+	animation-direction: forwards;
+	animation-duration: .50s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+}
+
+#girls {
+    position:absolute;
+    top: 15%;
+    left: 13%;
+    animation-name: breathe, turn;
+	animation-delay: 1s;
+	animation-direction: forwards;
+	animation-duration: .50s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in;
+}
+
+#double {
+    position:absolute;
+    top: 28%;
+    left: 25%;
+    animation-name: breathe, turn;
+	animation-delay: 1.5s;
+	animation-direction: forwards;
+	animation-duration: .50s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in;
+}
+
+#dutch {
+    position:absolute;
+    top: 42%;
+    left: 43%;
+    animation-name: breathe, turn;
+	animation-delay: 2s;
+	animation-direction: forwards;
+	animation-duration: .50s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in;
+}
+
+#onThe {
+    position:absolute;
+    top: 57%;
+    left: 57%;
+    animation-name: breathe, turn;
+	animation-delay: 2.5s;
+	animation-direction: forwards;
+	animation-duration: .50s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: ease-in;
+}
+
+#concrete {
+    position:absolute;
+    top: 70%;
+    left: 75%;
+    animation-name: breathe, turn;
+	animation-delay: 3s;
+	animation-direction: forwards;
+	animation-duration: 3.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in;
+}
+
+#concrete a {
+    text-decoration: none;
+    color:#FAB4B4
+}
+
+#concrete a:visited {
+    color:#FAB4B4
+}
+
+a:hover {
+    cursor: alias;
+}
+
+#nav {
+    color:#716f6f;
+    position: fixed;
+    font-size: 14pt;
+    width: 18%;
+    bottom: 2%;
+    left: 0%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-end;
+    justify-content: space-around;
+    font-family: "Schoolbell", cursive;
+    text-shadow: none;
+}
+
+#nav a {
+    display:inline-block;
+    text-decoration:none;
+    color:#716f6f;
+}
+
+#nav a:visited {color:#716f6f}
+
+#nav a:hover {
+    transform:scale(130%);
+    -webkit-transform:scale(130%);
+    -moz-transform:scale(130%);
+    -ms-transform:scale(130%);
+    -o-transform:scale(130%);
+}
+
+@keyframes breathe {
+    0% { transform:scale(100%) ; -webkit-transition:; -moz-transition:; -ms-transition:; -o-transition:; -webkit-transform:scale(100%) ; -moz-transform:scale(100%) ; -ms-transform:scale(100%) ; -o-transform:scale(100%) ; }
+
+    50% { transform:scale(135%); -webkit-transform:scale(135%); -moz-transform:scale(135%); -ms-transform:scale(135%); -o-transform:scale(135%); }
+
+    100% {
+        transform:scale(100%)    ;
+        -webkit-transform:scale(100%)    ;
+        -moz-transform:scale(100%)    ;
+        -ms-transform:scale(100%)    ;
+        -o-transform:scale(100%)    ;
+}
+}
+
+@keyframes turn {
+    0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    25% { transform:rotate(15deg); -webkit-transform:rotate(10deg); -moz-transform:rotate(15deg); -ms-transform:rotate(15deg); -o-transform:rotate(15deg); }
+
+    50% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    75% { transform:rotate(-10deg); -webkit-transform:rotate(-10deg); :rotate(15deg); -moz-transform:rotate(-10deg); :rotate(15deg); -ms-transform:rotate(-10deg); :rotate(15deg); -o-transform:rotate(-10deg); :rotate(15deg); }
+
+    100% { transform:rotate(0deg); -webkit-transform:rotate(0deg); -moz-transform:rotate(0deg); -ms-transform:rotate(0deg); -o-transform:rotate(0deg); }
+}

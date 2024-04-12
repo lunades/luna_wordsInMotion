@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(226, 237, 247);
+}
+
 #birds {
     width: 40%;
     height: 10%;
@@ -49,37 +53,93 @@
 }
 
 #lines {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Alegreya", serif;
     font-weight: 400;
-    font-size: xx-large;
+    font-size: 30pt;
 }
 
 #line {
     color:#828282;
     position: absolute;
     top: 40%;
-    left: -50%;
-    animation-name: slide;
+    left: 40%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-right: 8px;
+}
+
+#line {
+    animation-name: appear;
+    animation-delay: 0s;
+    animation-direction:forwards;
+    animation-duration: 11s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+}
+
+#sat {
+    padding-right: 8px;
+    animation-name: drop;
 	animation-delay: 5s;
-	animation-direction: forwards;
-	animation-duration: 3s;
+	animation-direction:reverse;
+	animation-duration: 2s;
 	animation-fill-mode:forwards;
-	animation-iteration-count: 1;
+	animation-iteration-count:1;
 	animation-play-state: running;
 	animation-timing-function: ease-out;
 }
 
+#on {
+    padding-right: 8px;
+    animation-name: drop;
+	animation-delay: 5.5s;
+	animation-direction:reverse;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count:1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+#my {
+    padding-right: 8px;
+    animation-name: drop;
+	animation-delay: 6s;
+	animation-direction:reverse;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count:1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+#window {
+    padding-right: 8px;
+    animation-name: drop;
+	animation-delay: 6.5s;
+	animation-direction:reverse;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count:1;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+}
+
+
 #lineTwo {
     position: absolute;
-    top: 50%;
-    left: -60%;
+    top: 55%;
+    left: 40%;
     color:#828282;
-    animation-name: slide;
-	animation-delay: 7s;
-	animation-direction: forwards;
-	animation-duration: 3s;
+    animation-name: appear;
+	animation-delay: 0s;
+	animation-direction:forwards;
+	animation-duration: 15s;
 	animation-fill-mode:forwards;
-	animation-iteration-count: 1;
+	animation-iteration-count:1;
 	animation-play-state: running;
 	animation-timing-function: ease-out;
 }
@@ -88,21 +148,52 @@ a:visited {
     color:#828282;
 }
 
-a {
-    text-decoration: none;
-    animation-name: blink;
-	animation-delay: 0s;
-	animation-direction:normal;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-play-state:running;
-	animation-timing-function: ease-in-out;
-}
-
 a:hover {
     cursor:alias;
 }
 
+#lineTwo a {
+    font-size: 35pt;
+    text-decoration: none;
+    animation-name: blink;
+	animation-delay: 10s;
+	animation-direction:normal;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-play-state:running;
+    animation-timing-function: ease-in-out;
+}
+
+#nav {
+    color:#716f6f;
+    position: fixed;
+    font-size: 14pt;
+    width: 18%;
+    bottom: 0%;
+    left: 0%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-end;
+    justify-content: space-around;
+    font-family: "Schoolbell", cursive;
+}
+
+#nav a {
+    color:#716f6f;
+    display:inline-block;
+    text-decoration:none;
+}
+
+#nav a:visited {color:#716f6f}
+
+#nav a:hover {
+    transform:scale(130%);
+    -webkit-transform:scale(130%);
+    -moz-transform:scale(130%);
+    -ms-transform:scale(130%);
+    -o-transform:scale(130%);
+}
 
 @keyframes diagonal {
 from {
@@ -138,26 +229,26 @@ to {position: fixed;
     100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
 }
 
-@keyframes slide {
-    from {
-        transform:translate(0)    ;
-        -webkit-transform:translate(0)    ;
-        -moz-transform:translate(0)    ;
-        -ms-transform:translate(0)    ;
-        -o-transform:translate(0)    ;
-}
+@keyframes drop {
+    from { transform:translateY(0); -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); }
 
     to {
-        transform:translateX(500%)    ;
-        -webkit-transform:translateX(500%)    ;
-        -moz-transform:translateX(500%)    ;
-        -ms-transform:translateX(500%)    ;
-        -o-transform:translateX(500%)    ;
+        transform:translateY(-100vh);
+        -webkit-transform:translateY(-100vh);
+        -moz-transform:translateY(-100vh);
+        -ms-transform:translateY(-100vh);
+        -o-transform:translateY(-100vh);
 }
 }
 
 @keyframes blink {
-    0% {color:828282}
-    50% {color:rgb(190, 189, 189)}
     0% {color:#716f6f}
+    50% {color:rgb(124, 208, 231)}
+    0% {color:#716f6f}
+  }
+
+@keyframes appear {
+    0% {opacity: 0%}
+    60% {opacity:1%}
+    100% {opacity: 100%}
   }

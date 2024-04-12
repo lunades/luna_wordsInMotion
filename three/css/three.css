@@ -1,15 +1,16 @@
-html {
+body {
+    width: 100%;
     background: radial-gradient(circle at .5% .5%, #eddab5, #d9fbf9);
 }
 
 .summer {
-    color: #597B79;
+    color:#ffc34a;
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-size: 60pt;
      position: fixed;
      text-shadow: 3px 3px 4px #51d2a57d;
-  animation-name: turn, blink;
+     animation-name: turn;
 	animation-delay: 30ms;
 	animation-direction: normal;
 	animation-duration: 3s;
@@ -20,74 +21,90 @@ html {
 }
 
 #s {
-    top: 36%;
+    top: 28vh;
     left: 2%;
 }
 
 #u {
-    top: 36%;
-    left: 10%;
+    top: 28vh;
+    left: 9%;
 }
 
 #m {
-    top: 30%;
-    left: 19%;
+    top: 24vh;
+    left: 16%;
 }
 
 #mTwo {
-    top: 18%;
-    left: 26%;
+    top: 14vh;
+    left: 22%;
 }
 
 #e {
-    top: 5%;
-    left: 28%
+    top: 2vh;
+    left: 26%
 }
 
 #r {
-    bottom: 75%;
-    left: 26%;
+    bottom: 77vh;
+    left: 27%;
 }
 
 #line {
-    position: fixed;
-    bottom: 110%;
-    right: 40%;
+    position: relative;
+    top: 50vh;
+    left: 40%;
     font-size: 20pt;
-    color: #AF755C;
+    color:#AF755C;
     font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: xx-large;
-  animation-name: drop;
-  animation-delay: 1s;
-  animation-direction: forwards;
-  animation-duration: 4s;
-  animation-fill-mode:forwards;
-  animation-iteration-count: 1;
-  animation-play-state: running;
-  animation-timing-function: ease-out;
+   font-weight: 500;
+   font-size: xx-large;
+   animation-name: drop;
+   animation-delay: 0s;
+   animation-direction:reverse;
+   animation-duration: 3s;
+   animation-fill-mode:forwards;
+   animation-iteration-count:1;
+   animation-play-state: running;
+   animation-timing-function: ease-in-out;
 }
 
 #lineTwo {
     position: absolute;
-    top: 65%;
-    left: -50%;
-    font-size: 20pt;
-    color: #828282
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    font-size: xx-large;
-    animation-name: slide;
-	animation-delay: 4s;
-	animation-direction: forwards;
-	animation-duration: 3s;
-	animation-fill-mode:forwards;
-	animation-iteration-count: 1;
-	animation-play-state: running;
-	animation-timing-function: ease-out;
+    top: 50vh;
+    left: 42%;
+    font-size: 80pt;
+    color: #FAB4B4;
+    font-family: "Butterfly Kids", cursive;
+    text-shadow: 2px 2px 6px #59945d;
+    font-weight: 590;
+    animation-name: appear;
+    animation-delay: 0s;
+    animation-direction:forwards;
+    animation-duration: 5s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
 }
 
-a:visited {
+#lineTwo a {
+    color: #FAB4B4;
+    animation-name: blink;
+    animation-delay: 0s;
+    animation-direction:forwards;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+}
+
+#lineTwo a:visited {
+    color: #FAB4B4;
+}
+
+#nav a:visited {
     color: #828282;
 }
 
@@ -99,52 +116,73 @@ a:hover {
     cursor: alias;
 }
 
+#nav {
+    color:#716f6f;
+    position: fixed;
+    font-size: 14pt;
+    width: 18%;
+    bottom: 0%;
+    left: 0%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-end;
+    justify-content: space-around;
+    font-family: "Schoolbell", cursive;
+}
+
+#nav a {
+    color:#716f6f;
+    display:inline-block;
+    text-decoration:none;
+    align-items:flex-end;
+}
+
+#nav a:visited {color:#716f6f}
+
+#nav a:hover {
+    transform:scale(130%);
+    -webkit-transform:scale(130%);
+    -moz-transform:scale(130%);
+    -ms-transform:scale(130%);
+    -o-transform:scale(130%);
+}
 
 @keyframes turn {
     0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
 
-    50% { transform:rotate(-15deg); -webkit-transform:rotate(-15deg); -moz-transform:rotate(-15deg); -ms-transform:rotate(-15deg); -o-transform:rotate(-15deg); }
+    25% { transform:rotate(-15deg); -webkit-transform:rotate(-15deg); -moz-transform:rotate(-15deg); -ms-transform:rotate(-15deg); -o-transform:rotate(-15deg); }
 
-    100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+    50% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+
+    75% { transform:rotate(15deg); -webkit-transform:rotate(15deg); :rotate(15deg); -moz-transform:rotate(15deg); :rotate(15deg); -ms-transform:rotate(15deg); :rotate(15deg); -o-transform:rotate(15deg); :rotate(15deg); }
+
+    100% { transform:rotate(0deg); -webkit-transform:rotate(0deg); -moz-transform:rotate(0deg); -ms-transform:rotate(0deg); -o-transform:rotate(0deg); }
 }
 
 @keyframes blink {
-    0% {color:#597B79}
-    50% {color:#a5bebc}
-    0% {color:#597B79}
+    0% {color:#f1a944}
+    50% {color:#b3fbdc}
+    0% {color:#fbb5a4}
   }
 
-  @keyframes drop {
-    from {
-        transform:translate(0)    ;
-        -webkit-transform:translate(0)    ;
-        -moz-transform:translate(0)    ;
-        -ms-transform:translate(0)    ;
-        -o-transform:translate(0)    ;
-}
-to {
-    transform:translateY(900%)    ;
-    -webkit-transform:translateY(1400%)    ;
-    -moz-transform:translateY(900%)    ;
-    -ms-transform:translateY(900%)    ;
-    -o-transform:translateY(900%)    ;
-}
-}
 
-@keyframes slide {
-    from {
-        transform:translate(0)    ;
-        -webkit-transform:translate(0)    ;
-        -moz-transform:translate(0)    ;
-        -ms-transform:translate(0)    ;
-        -o-transform:translate(0)    ;
-}
+@keyframes drop {
+    from { transform:translateY(0); -webkit-transform:translateY(0); -moz-transform:translateY(0); -ms-transform:translateY(0); -o-transform:translateY(0); }
 
     to {
-        transform:translateX(750%)    ;
-        -webkit-transform:translateX(750%)    ;
-        -moz-transform:translateX(750%)    ;
-        -ms-transform:translateX(750%)    ;
-        -o-transform:translateX(750%)    ;
+        transform:translateY(-100vh);
+        -webkit-transform:translateY(-100vh);
+        -moz-transform:translateY(-100vh);
+        -ms-transform:translateY(-100vh);
+        -o-transform:translateY(-100vh);
 }
 }
+
+@keyframes appear {
+    0% {opacity: 0%}
+    70% {opacity: .1%}
+    100% {opacity: 100%}
+  }
+
+  
